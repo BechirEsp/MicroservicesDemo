@@ -55,4 +55,10 @@ public class CandidatController {
         }
     }
 
+    @GetMapping("/favorites")
+    public List<JobDto> getFavoriteJobs() {
+        return candidateService.getFavoriteJobsAsync();
+    }
+
+
 }

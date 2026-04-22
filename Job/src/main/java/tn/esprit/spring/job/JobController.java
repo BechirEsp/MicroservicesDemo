@@ -1,5 +1,6 @@
 package tn.esprit.spring.job;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,4 +30,11 @@ public class JobController {
                           @RequestParam Boolean etat) {
         return jobService.updateEtat(id, etat);
     }
+    @PostMapping("/send")
+    public ResponseEntity<Job> createJob(@RequestBody Job job) {
+        Job savedJob = jobService.saveAndSendJob(job);
+        return ResponseEntity.ok(savedJob);
+        // return "Job created and sent to RabbitMQ with ID: " +
+    }
+
 }
