@@ -37,4 +37,14 @@ public class JobController {
         // return "Job created and sent to RabbitMQ with ID: " +
     }
 
+    @PostMapping("search")
+    public List<JobDocument> searchService(@RequestBody String search) {
+        return jobService.findByServiceIsContainingIgnoreCase(search);
+    }
+
+
+    @PostMapping("searchsql")
+    public List<Job> searchServiceSQL(@RequestBody String search) {
+        return jobService.findByServiceSQL(search);
+    }
 }
