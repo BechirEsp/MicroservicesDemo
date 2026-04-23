@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>tn.esprit.spring</groupId>
-    <artifactId>demoEurekaServer</artifactId>
+    <artifactId>EurekaServer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demoEurekaServer</name>
-    <description>demoEurekaServer</description>
+    <name>EurekaServer</name>
+    <description>EurekaServer</description>
     <url/>
     <licenses>
         <license/>
